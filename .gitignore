@@ -1,3 +1,6 @@
+# Claude Code project files
+.claude/
+
 # Build outputs
 [Bb]in/
 [Oo]bj/
