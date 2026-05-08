@@ -1,0 +1,85 @@
+<Window x:Class="EchoClip.Views.ConsentDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Privacy &amp; Consent — EchoClip"
+        Width="520" Height="420"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#1E1F22"
+        Foreground="White"
+        FontFamily="Segoe UI">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Margin="32">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="&#x1F3A4; EchoClip" FontSize="22" FontWeight="Bold"
+                       Foreground="White" Margin="0,0,0,6"/>
+            <TextBlock Text="Audio Clip Manager for Discord" FontSize="13"
+                       Foreground="#B5BAC1"/>
+        </StackPanel>
+
+        <!-- Body -->
+        <Border Grid.Row="1" Background="#2B2D31" CornerRadius="8" Padding="20">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="White"
+                               Text="Important: How this app uses audio" Margin="0,0,0,12"/>
+
+                    <TextBlock TextWrapping="Wrap" FontSize="13" LineHeight="22"
+                               Foreground="#B5BAC1">
+                        <Run FontWeight="SemiBold" Foreground="White">EchoClip only records audio when you explicitly press the save hotkey.</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        While the buffer is active, the last 10 seconds of microphone audio is held
+                        <Run FontWeight="SemiBold" Foreground="White">in memory only</Run>
+                        and is discarded automatically when you leave a Discord voice call.
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run FontWeight="SemiBold" Foreground="White">Nothing is written to disk</Run>
+                        unless you press the configured save hotkey (default: F8).
+                        <LineBreak/>
+                        <LineBreak/>
+                        All clips are stored locally on your computer. The app
+                        <Run FontWeight="SemiBold" Foreground="White">never uploads audio</Run>
+                        to any server.
+                        <LineBreak/>
+                        <LineBreak/>
+                        You can delete all recordings and metadata at any time from Settings.
+                    </TextBlock>
+
+                    <Border Margin="0,16,0,0" Background="#3A3D41" CornerRadius="6" Padding="12">
+                        <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="#FEE75C">
+                            Inform other participants in a call if you intend to save clips.
+                            Always comply with applicable consent and recording laws in your jurisdiction.
+                        </TextBlock>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right"
+                    Margin="0,20,0,0">
+            <Button Content="Decline" Width="100" Margin="0,0,10,0"
+                    Style="{StaticResource BtnGhost}"
+                    Click="DeclineClick"/>
+            <Button x:Name="AcceptBtn" Content="I Understand — Continue" Width="200"
+                    Style="{StaticResource BtnAccent}"
+                    Click="AcceptClick"/>
+        </StackPanel>
+    </Grid>
+</Window>

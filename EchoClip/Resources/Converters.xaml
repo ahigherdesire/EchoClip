@@ -1,0 +1,17 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:h="clr-namespace:EchoClip.Helpers">
+
+    <h:NullToVisibilityConverter  x:Key="NullVis"/>
+    <h:NullToCollapsedConverter   x:Key="NullCollapsed"/>
+    <h:BoolToVisibilityConverter  x:Key="BoolVis"/>
+    <h:StringEqualityConverter    x:Key="StringEqConverter"/>
+    <h:BoolToBrushConverter       x:Key="BoolToBrush"/>
+
+    <!-- Recording active indicator -->
+    <h:BoolToBrushConverter x:Key="ActiveBrush"
+        TrueBrush="#23A559"
+        FalseBrush="#80848E"/>
+
+</ResourceDictionary>
