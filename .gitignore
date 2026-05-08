@@ -1,0 +1,44 @@
+# Build outputs
+[Bb]in/
+[Oo]bj/
+publish/
+out/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+*.DotSettings.user
+
+# NuGet
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/[Pp]ackages/
+!**/[Pp]ackages/build/
+
+# User-generated runtime data (stored in %AppData%\EchoClip at runtime, not in repo)
+*.db
+*.db-shm
+*.db-wal
+settings.json
+
+# Publish profile secrets
+*.pubxml.user
+**/Properties/PublishProfiles/*.pubxml
+
+# OS noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Test results
+TestResults/
+*.trx
