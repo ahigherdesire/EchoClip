@@ -1,9 +1,8 @@
 using System.Windows.Controls;
-using EchoClip.ViewModels;
 
 namespace EchoClip.Views
 {
-    public partial class ClipManagerView : UserControl
+    public partial class ClipManagerView : System.Windows.Controls.UserControl
     {
         public ClipManagerView()
         {

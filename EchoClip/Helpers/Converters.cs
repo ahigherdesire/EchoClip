@@ -2,7 +2,9 @@ using System;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
-using System.Windows.Media;
+using WpfBrush = System.Windows.Media.Brush;
+using WpfSolidBrush = System.Windows.Media.SolidColorBrush;
+using WpfColor = System.Windows.Media.Color;
 
 namespace EchoClip.Helpers
 {
@@ -43,12 +45,12 @@ namespace EchoClip.Helpers
             v is Visibility vis && vis == Visibility.Visible;
     }
 
-    /// <summary>Maps bool → two colors. ConverterParameter = "TrueColor|FalseColor" in hex.</summary>
-    [ValueConversion(typeof(bool), typeof(Brush))]
+    /// <summary>Maps bool → two brushes.</summary>
+    [ValueConversion(typeof(bool), typeof(WpfBrush))]
     public class BoolToBrushConverter : IValueConverter
     {
-        public Brush TrueBrush  { get; set; } = new SolidColorBrush(Color.FromRgb(0x23, 0xA5, 0x59));
-        public Brush FalseBrush { get; set; } = new SolidColorBrush(Color.FromRgb(0x80, 0x84, 0x8E));
+        public WpfBrush TrueBrush  { get; set; } = new WpfSolidBrush(WpfColor.FromRgb(0x23, 0xA5, 0x59));
+        public WpfBrush FalseBrush { get; set; } = new WpfSolidBrush(WpfColor.FromRgb(0x80, 0x84, 0x8E));
 
         public object Convert(object? v, Type t, object? p, CultureInfo c) =>
             v is bool b && b ? TrueBrush : FalseBrush;
