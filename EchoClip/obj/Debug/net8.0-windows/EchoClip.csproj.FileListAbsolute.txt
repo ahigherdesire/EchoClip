@@ -1,0 +1,13 @@
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\EchoClip.csproj.AssemblyReference.cache
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\Resources\Styles.baml
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\Views\ConsentDialog.baml
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\Views\SettingsView.baml
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\App.baml
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\Views\ClipManagerView.g.cs
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\Views\ConsentDialog.g.cs
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\Views\SettingsView.g.cs
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\EchoClip_MarkupCompile.cache
+C:\Users\LIXINYUAN\interesting stuff\EchoClip\EchoClip\obj\Debug\net8.0-windows\EchoClip_MarkupCompile.lref

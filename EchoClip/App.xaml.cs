@@ -1,21 +1,25 @@
 using System;
 using System.IO;
-using System.Windows;
 using EchoClip.Data;
 using EchoClip.Models;
 using EchoClip.Services;
 using EchoClip.ViewModels;
 using EchoClip.Views;
+using WpfApp = System.Windows.Application;
+using WpfStartup = System.Windows.StartupEventArgs;
+using WpfExit = System.Windows.ExitEventArgs;
+using WpfWindow = System.Windows.Window;
+using WpfWindowState = System.Windows.WindowState;
 
 namespace EchoClip
 {
-    public partial class App : Application
+    public partial class App : WpfApp
     {
         private MainViewModel?    _vm;
         private SystemTrayService _tray = new();
         private MainWindow?       _window;
 
-        protected override void OnStartup(StartupEventArgs e)
+        protected override void OnStartup(WpfStartup e)
         {
             base.OnStartup(e);
 
@@ -69,7 +73,7 @@ namespace EchoClip
         {
             if (_window == null) return;
             _window.Show();
-            _window.WindowState = WindowState.Normal;
+            _window.WindowState = WpfWindowState.Normal;
             _window.Activate();
         }
 
@@ -80,7 +84,7 @@ namespace EchoClip
             Shutdown();
         }
 
-        protected override void OnExit(ExitEventArgs e)
+        protected override void OnExit(WpfExit e)
         {
             _vm?.Shutdown();
             _tray.Dispose();

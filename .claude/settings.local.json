@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell($env:PATH += \";C:\\\\Program Files\\\\dotnet\"; cd \"C:\\\\Users\\\\LIXINYUAN\\\\interesting stuff\\\\EchoClip\\\\EchoClip\"; & \"C:\\\\Program Files\\\\dotnet\\\\dotnet.exe\" restore 2>&1 | Select-Object -Last 20)"
+      "PowerShell($env:PATH += \";C:\\\\Program Files\\\\dotnet\"; cd \"C:\\\\Users\\\\LIXINYUAN\\\\interesting stuff\\\\EchoClip\\\\EchoClip\"; & \"C:\\\\Program Files\\\\dotnet\\\\dotnet.exe\" restore 2>&1 | Select-Object -Last 20)",
+      "PowerShell($env:PATH += \";C:\\\\Program Files\\\\dotnet\"; cd \"C:\\\\Users\\\\LIXINYUAN\\\\interesting stuff\\\\EchoClip\\\\EchoClip\"; & \"C:\\\\Program Files\\\\dotnet\\\\dotnet.exe\" build --no-restore 2>&1 | Select-Object -Last 60)"
     ]
   }
 }
