@@ -18,8 +18,8 @@ namespace EchoClip.ViewModels
 
         public SettingsViewModel(AppSettings settings, MainViewModel main)
         {
-            _settings = settings;
-            _main     = main;
+            Settings = settings;    // use generated property to avoid MVVMTK0034
+            _main    = main;
             RefreshDevices();
         }
 
@@ -38,8 +38,8 @@ namespace EchoClip.ViewModels
         [RelayCommand]
         public void Save()
         {
-            SettingsService.SetStartWithWindows(_settings.StartWithWindows);
-            _main.ApplyNewSettings(_settings);
+            SettingsService.SetStartWithWindows(Settings.StartWithWindows);
+            _main.ApplyNewSettings(Settings);
             SavedMessage = "Settings saved.";
         }
 
@@ -50,7 +50,7 @@ namespace EchoClip.ViewModels
             {
                 Description         = "Select folder for saved clips",
                 UseDescriptionForTitle = true,
-                SelectedPath        = _settings.ClipsDirectory
+                SelectedPath        = Settings.ClipsDirectory
             };
             if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 Settings.ClipsDirectory = dlg.SelectedPath;

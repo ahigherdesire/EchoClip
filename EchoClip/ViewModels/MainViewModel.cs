@@ -24,8 +24,12 @@ namespace EchoClip.ViewModels
         [ObservableProperty] private bool    _isDiscordRunning;
         [ObservableProperty] private bool    _isPlaying;
         [ObservableProperty] private string? _nowPlayingName;
-        [ObservableProperty] private float   _globalVolume       = 1.0f;
-        [ObservableProperty] private AppSettings _settings;
+        [ObservableProperty] private float _globalVolume = 1.0f;
+
+        // Not [ObservableProperty] — mutated internally; XAML binds to Settings.XXX via SettingsVm
+        private AppSettings _settings;
+
+        public AppSettings Settings => _settings;
 
         private int _saveHotkeyId  = -1;
         private int _muteHotkeyId  = -1;
@@ -232,6 +236,6 @@ namespace EchoClip.ViewModels
         }
 
         private static void Dispatch(Action a) =>
-            Application.Current?.Dispatcher.Invoke(a);
+            System.Windows.Application.Current?.Dispatcher.Invoke(a);
     }
 }

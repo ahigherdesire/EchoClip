@@ -9,7 +9,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>EchoClip</AssemblyName>
     <RootNamespace>EchoClip</RootNamespace>
-    <ApplicationIcon>Assets\tray.ico</ApplicationIcon>
+    <!-- ApplicationIcon>Assets\tray.ico</ApplicationIcon --> <!-- provide tray.ico in Assets\ to enable -->
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Platforms>AnyCPU</Platforms>
     <ApplicationManifest>app.manifest</ApplicationManifest>

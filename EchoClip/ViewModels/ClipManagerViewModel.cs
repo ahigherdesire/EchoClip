@@ -5,7 +5,7 @@ using CommunityToolkit.Mvvm.Input;
 using EchoClip.Data;
 using EchoClip.Models;
 using EchoClip.Services;
-using Microsoft.Win32;
+using Win32FileDialog = Microsoft.Win32.OpenFileDialog;
 
 namespace EchoClip.ViewModels
 {
@@ -89,7 +89,7 @@ namespace EchoClip.ViewModels
         [RelayCommand]
         public void Import()
         {
-            var dlg = new OpenFileDialog
+            var dlg = new Win32FileDialog
             {
                 Title       = "Import Audio Files",
                 Filter      = "Audio Files|*.wav;*.mp3;*.ogg;*.flac;*.m4a;*.aac|All Files|*.*",

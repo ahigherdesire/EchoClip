@@ -69,6 +69,6 @@ namespace EchoClip.Helpers
             v?.ToString() == p?.ToString();
 
         public object ConvertBack(object? v, Type t, object? p, CultureInfo c) =>
-            v is bool b && b ? p?.ToString() ?? string.Empty : Binding.DoNothing;
+            v is bool b && b ? p?.ToString() ?? string.Empty : System.Windows.Data.Binding.DoNothing;
     }
 }
